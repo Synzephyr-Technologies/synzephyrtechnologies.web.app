@@ -150,3 +150,45 @@ body {
     animation: none;
   }
 }
+
+/* ─── Mobile-Friendliness ─────────────────────────────────────────────────── */
+
+/* Remove 300ms tap delay on all interactive elements */
+a,
+button,
+input,
+select,
+textarea,
+label,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+/* Ensure minimum tap target size (48×48px) for better mobile accessibility */
+button,
+[role="button"],
+a {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Prevent iOS Safari from auto-zooming on input focus (font-size must be ≥16px) */
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+/* Prevent horizontal overflow / content wider than viewport on mobile */
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Ensure images never overflow their containers on small screens */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}

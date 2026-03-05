@@ -89,7 +89,7 @@ export default function ConnectPage() {
         <div className="flex flex-col min-h-screen items-center justify-center py-20 px-4 bg-muted/20">
             <div className="w-full max-w-4xl text-center">
                 <div className="mx-auto mb-6 flex items-center justify-center">
-                    <Image src="/logo.png" alt="Synzephyr Technologies" width={270} height={70} className="h-40 w-auto rounded-xl shadow-lg" />
+                    <Image src="/logo.webp" alt="Synzephyr Technologies" width={270} height={70} className="h-40 w-auto rounded-xl shadow-lg" />
                 </div>
                 <h1 className="text-3xl font-extrabold tracking-tight mb-2">Synzephyr Technologies</h1>
                 <p className="text-muted-foreground mb-8">Digital Growth Agency | Pollachi & Coimbatore</p>
