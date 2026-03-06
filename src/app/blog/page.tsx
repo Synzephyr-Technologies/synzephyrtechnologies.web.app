@@ -4,7 +4,7 @@ import { Calendar, User, Tag, ArrowRight, ExternalLink, Rss } from "lucide-react
 
 export const metadata: Metadata = {
     title: "Digital Marketing Blog | SEO Tips Pollachi",
-    description: "Read the latest digital marketing tips, SEO guides, and local business growth insights from Synzephyr Technologies — your digital marketing agency in Pollachi & Coimbatore.",
+    description: "Read the latest digital marketing tips, SEO guides, and growth insights from Synzephyr Technologies — your global digital marketing and brand growth partner.",
     alternates: {
         canonical: "https://synzephyrtechnologies.web.app/blog",
     },

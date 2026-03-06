@@ -3,8 +3,8 @@ import Link from "next/link"
 import { Search, Globe, Palette, MapPin, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "Digital Marketing Services in Pollachi",
-    description: "Explore Synzephyr's full range of digital marketing services in Pollachi & Coimbatore: SEO, social media marketing, graphic design, and Google Business Profile (GMB) optimization.",
+    title: "Global Digital Growth & SEO Services",
+    description: "Scale your brand with Synzephyr's worldwide digital solutions: International SEO, performance marketing, and high-ROI digital growth strategies.",
     alternates: {
         canonical: "https://synzephyrtechnologies.web.app/services",
     },
@@ -13,32 +13,26 @@ export const metadata: Metadata = {
 
 const services = [
     {
-        title: "SEO Services in Pollachi",
-        description: "Dominate search results and attract local customers with our specialized SEO strategies tailored for the Pollachi market.",
+        title: "International SEO",
+        description: "Dominate search results globally. Our high-performance SEO strategies are designed to scale businesses across international borders and diverse search engines.",
         icon: Search,
-        href: "/seo-services-pollachi",
+        href: "/seo-services-pollachi", // Keeping these as the primary landing for now but renaming title
     },
     {
-        title: "SEO Services in Coimbatore",
-        description: "Expand your reach in the industrial hub of Coimbatore with our data-driven SEO solutions.",
-        icon: Search,
-        href: "/seo-services-coimbatore",
-    },
-    {
-        title: "Digital Marketing in Pollachi",
-        description: "Comprehensive social media marketing and PPC campaigns to grow your brand presence online.",
+        title: "Global Performance Marketing",
+        description: "Reach your audience anywhere. We execute precision-targeted PPC and social media campaigns that drive growth in any market worldwide.",
         icon: Globe,
         href: "/digital-marketing-pollachi",
     },
     {
-        title: "Graphic Design Services",
-        description: "Creative logo design, branding, and marketing materials that make your business stand out.",
+        title: "Strategic Branding & Design",
+        description: "Build a world-class brand identity. From pro logos to comprehensive brand style guides that resonate with international audiences.",
         icon: Palette,
         href: "/graphic-design-services-pollachi",
     },
     {
-        title: "GMB Setup & Optimization",
-        description: "Get found on Google Maps and Drive foot traffic with a fully optimized Google Business Profile.",
+        title: "Local SEO & GMB Power",
+        description: "Specialized Local SEO and Google Business Profile optimization for businesses looking to dominate their regional and city-level markets.",
         icon: MapPin,
         href: "/google-business-profile-setup-pollachi",
     },
@@ -49,9 +43,9 @@ export default function ServicesPage() {
         <div className="flex flex-col min-h-screen">
             <section className="bg-muted/30 py-20 text-center">
                 <div className="container px-4 md:px-6 mx-auto">
-                    <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">Our Services</h1>
+                    <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl mb-6">World-Class Digital Solutions</h1>
                     <p className="mx-auto max-w-[700px] text-muted-foreground text-lg md:text-xl">
-                        Tailored digital solutions to help your business thrive in the competitive landscape of Tamil Nadu.
+                        High-performance digital growth strategies delivered to businesses worldwide, powered by data and driven by results.
                     </p>
                 </div>
             </section>

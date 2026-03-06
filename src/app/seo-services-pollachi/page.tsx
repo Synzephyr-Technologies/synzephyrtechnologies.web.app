@@ -4,7 +4,7 @@ import { BarChart, Search, TrendingUp } from "lucide-react"
 
 export const metadata: Metadata = {
     title: "Best SEO Services in Pollachi",
-    description: "Looking for the best SEO services in Pollachi? Synzephyr Technologies helps local businesses rank #1 on Google with proven SEO strategies. Get more leads, more calls, and more sales. Free audit!",
+    description: "Best SEO services in Pollachi. Synzephyr Technologies helps local businesses rank #1 on Google with proven strategies. Get more leads and sales. Free audit!",
     alternates: {
         canonical: "https://synzephyrtechnologies.web.app/seo-services-pollachi",
     },
@@ -48,6 +48,15 @@ const faqJsonLd = {
     ]
 }
 
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://synzephyrtechnologies.web.app" },
+        { "@type": "ListItem", "position": 2, "name": "SEO Services Pollachi", "item": "https://synzephyrtechnologies.web.app/seo-services-pollachi" }
+    ]
+}
+
 const benefits = [
     "Keyword Research tailored for Pollachi & Coimbatore market",
     "On-Page & Off-Page Optimization",
@@ -64,6 +73,7 @@ export default function SeoPollachiPage() {
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
             <ServiceLayout
                 title="Best SEO Services in Pollachi"
                 subtitle="Dominate Google Search and Attract High-Value Local Leads in Pollachi."

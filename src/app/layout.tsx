@@ -26,28 +26,30 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://synzephyrtechnologies.web.app"),
   title: {
-    default: "Synzephyr Technologies | Digital Marketing Agency Pollachi",
+    default: "Synzephyr Technologies | Global Digital Growth & Marketing Agency",
     template: "%s | Synzephyr Technologies",
   },
-  description: "Top digital marketing agency in Pollachi & Coimbatore. Expert SEO, GMB optimization & social media marketing to grow your local business.",
+  description: "Worldwide digital marketing agency specializing in high-performance SEO, global brand growth, and data-driven marketing strategies for businesses everywhere.",
   alternates: {
     canonical: "https://synzephyrtechnologies.web.app",
     languages: {
       "en": "https://synzephyrtechnologies.web.app",
       "en-IN": "https://synzephyrtechnologies.web.app",
+      "en-US": "https://synzephyrtechnologies.web.app",
+      "en-GB": "https://synzephyrtechnologies.web.app",
     },
   },
   keywords: [
-    "digital marketing agency in Pollachi",
-    "SEO services in Pollachi",
-    "digital marketing agency in Coimbatore",
-    "GMB optimization Pollachi",
-    "GMB optimization Coimbatore",
-    "Google Business Profile setup Pollachi",
-    "SEO company Pollachi",
-    "social media marketing Pollachi",
-    "graphic design Pollachi",
-    "local SEO Tamil Nadu",
+    "global digital marketing agency",
+    "international SEO services",
+    "digital growth partner",
+    "worldwide marketing agency",
+    "search engine optimization worldwide",
+    "global brand strategy",
+    "online marketing Coimbatore Pollachi",
+    "B2B marketing globally",
+    "SaaS digital marketing",
+    "high-performance marketing strategies",
   ],
   robots: {
     index: true,
@@ -61,16 +63,26 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/logo-160.webp", sizes: "160x160", type: "image/webp" },
+    ],
     shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
+    apple: [
+      { url: "/logo-300.webp", sizes: "300x300", type: "image/webp" },
+    ],
   },
+  manifest: "/manifest.json",
   verification: {
     google: "JBxZnbNTUf5G2DrRxX9wTMrLPp6EIE2ktdPFqqqUSP0",
+    yandex: "2d6da97078bb3c50",
+    other: {
+      "msvalidate.01": ["YOUR_BING_VERIFICATION_ID"], // Standard Bing validation tag
+    },
   },
   openGraph: {
-    title: "Synzephyr Technologies | #1 Digital Marketing Agency in Pollachi & Coimbatore",
-    description: "Expert SEO, digital marketing, GMB optimization & graphic design services for businesses in Pollachi & Coimbatore, Tamil Nadu.",
+    title: "Synzephyr Technologies | Global Digital Growth & Marketing Agency",
+    description: "Expert SEO, digital marketing, and global brand growth strategies for businesses worldwide.",
     url: "https://synzephyrtechnologies.web.app",
     siteName: "Synzephyr Technologies",
     images: [
@@ -78,18 +90,27 @@ export const metadata: Metadata = {
         url: "https://synzephyrtechnologies.web.app/logo.webp",
         width: 1200,
         height: 630,
-        alt: "Synzephyr Technologies – Digital Marketing Agency in Pollachi",
+        alt: "Synzephyr Technologies – Global Digital Marketing Agency",
       },
     ],
-    locale: "en_IN",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Synzephyr Technologies | Digital Marketing Agency in Pollachi",
-    description: "Expert SEO, GMB optimization & digital marketing for local businesses in Pollachi & Coimbatore.",
+    title: "Synzephyr Technologies | Global Digital Growth Agency",
+    description: "Data-driven SEO, brand growth, and digital marketing for businesses worldwide.",
     images: ["https://synzephyrtechnologies.web.app/logo.webp"],
     site: "@synzephyr_tech",
+    creator: "@synzephyr_tech",
+  },
+  category: "technology",
+  other: {
+    "revisit-after": "1 days",
+    "distribution": "global",
+    "rating": "General",
+    "p:domain_verify": "YOUR_PINTEREST_VERIFICATION_CODE", // Optional but good for Pinterest
+    "bingbot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
   },
 };
 
@@ -182,19 +203,16 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "LocalBusiness",
-              "@id": "https://synzephyrtechnologies.web.app/#localbusiness",
+              "@type": "Organization",
+              "@id": "https://synzephyrtechnologies.web.app/#organization",
               "name": "Synzephyr Technologies",
               "legalName": "Synzephyr Technologies",
               "image": "https://synzephyrtechnologies.web.app/logo.webp",
               "logo": "https://synzephyrtechnologies.web.app/logo.webp",
-              "description": "Synzephyr Technologies is the leading digital marketing agency in Pollachi and Coimbatore, offering SEO services, Google Business Profile optimization, social media marketing, and graphic design to help local businesses grow online.",
+              "description": "Synzephyr Technologies is a global digital marketing and growth agency specializing in high-performance SEO, social media marketing, and data-driven branding for businesses worldwide.",
               "url": "https://synzephyrtechnologies.web.app",
               "telephone": "+919443449557",
               "email": "contact.synzephyr@gmail.com",
-              "priceRange": "₹₹",
-              "currenciesAccepted": "INR",
-              "paymentAccepted": "Cash, Bank Transfer, UPI",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Pollachi",
@@ -203,49 +221,25 @@ export default function RootLayout({
                 "postalCode": "642001",
                 "addressCountry": "IN"
               },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 10.6601,
-                "longitude": 77.0046
+              "areaServed": {
+                "@type": "Country",
+                "name": "Worldwide"
               },
-              "areaServed": [
-                { "@type": "City", "name": "Pollachi" },
-                { "@type": "City", "name": "Coimbatore" },
-                { "@type": "City", "name": "Udumalpet" },
-                { "@type": "City", "name": "Tiruppur" }
-              ],
               "sameAs": [
-                "https://share.google/qzAusQ6g4QiP59MeV",
+                "https://share.google.com/qzAusQ6g4QiP59MeV",
                 "https://www.instagram.com/synzephyr.tech",
                 "https://www.facebook.com/synzephyr.tech",
                 "https://www.linkedin.com/company/synzephyr/",
                 "https://x.com/synzephyr_tech",
                 "https://www.reddit.com/user/SynzephyrTech"
               ],
-              "openingHoursSpecification": [
-                {
-                  "@type": "OpeningHoursSpecification",
-                  "dayOfWeek": [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                    "Saturday"
-                  ],
-                  "opens": "09:00",
-                  "closes": "18:00"
-                }
-              ],
               "hasOfferCatalog": {
                 "@type": "OfferCatalog",
-                "name": "Digital Marketing Services",
+                "name": "Global Growth Services",
                 "itemListElement": [
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Services in Pollachi", "url": "https://synzephyrtechnologies.web.app/seo-services-pollachi" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SEO Services in Coimbatore", "url": "https://synzephyrtechnologies.web.app/seo-services-coimbatore" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing in Pollachi", "url": "https://synzephyrtechnologies.web.app/digital-marketing-pollachi" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graphic Design Services Pollachi", "url": "https://synzephyrtechnologies.web.app/graphic-design-services-pollachi" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Business Profile Setup Pollachi", "url": "https://synzephyrtechnologies.web.app/google-business-profile-setup-pollachi" } }
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Global SEO Services", "url": "https://synzephyrtechnologies.web.app/services" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing Worldwide", "url": "https://synzephyrtechnologies.web.app/services" } },
+                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding & Graphic Design", "url": "https://synzephyrtechnologies.web.app/graphic-design-services-pollachi" } }
                 ]
               }
             }),

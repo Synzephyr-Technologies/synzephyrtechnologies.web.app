@@ -8,14 +8,14 @@ import Link from "next/link"
 import { CheckCircle, MapPin, ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Agency in Pollachi | Synzephyr",
-  description: "Synzephyr Technologies – Pollachi's #1 digital marketing agency. We offer SEO, Google Business Profile (GMB) optimization, social media marketing & graphic design. Get a free consultation today!",
+  title: "Synzephyr Technologies | Global Digital Growth & Marketing Agency",
+  description: "Synzephyr Technologies is a global digital growth agency. Scale your brand worldwide with our expert SEO, digital marketing, and high-performance strategies.",
   alternates: {
     canonical: "https://synzephyrtechnologies.web.app",
   },
   openGraph: {
-    title: "Digital Marketing Agency in Pollachi | Synzephyr",
-    description: "Synzephyr Technologies – Pollachi's #1 digital marketing agency. SEO, GMB optimization, social media marketing & graphic design.",
+    title: "Global Digital Growth & Marketing Agency | Synzephyr",
+    description: "Scale your business worldwide with Synzephyr Technologies. Expert global SEO, digital marketing, and data-driven brand growth strategies.",
     url: "https://synzephyrtechnologies.web.app",
   },
 }
@@ -28,7 +28,7 @@ const websiteJsonLd = {
   "name": "Synzephyr Technologies",
   "description": "Digital marketing agency in Pollachi & Coimbatore",
   "publisher": {
-    "@id": "https://synzephyrtechnologies.web.app/#localbusiness"
+    "@id": "https://synzephyrtechnologies.web.app/#organization"
   },
   "potentialAction": {
     "@type": "SearchAction",
@@ -42,24 +42,24 @@ const websiteJsonLd = {
 
 const faqs = [
   {
-    q: "What digital marketing services do you offer in Pollachi?",
-    a: "Synzephyr Technologies offers a comprehensive range of digital marketing services in Pollachi including Search Engine Optimization (SEO), Google Business Profile (GMB) setup and optimization, social media marketing and management, Facebook & Instagram advertising, Google Ads (PPC), graphic design, branding, and content marketing. We tailor every service to the specific needs of local Pollachi businesses."
+    q: "Do you serve clients outside of India?",
+    a: "Absolutely! Synzephyr Technologies is a global digital marketing agency. We serve clients from all over the world, including the US, UK, Europe, and Asia. Our strategies are built to scale brands internationally, regardless of their physical location."
   },
   {
-    q: "How can SEO help my business in Pollachi?",
-    a: "SEO helps your Pollachi business appear at the top of Google search results when potential customers search for your services. For example, if you run a restaurant in Pollachi, a well-executed local SEO strategy will help you appear when someone searches 'restaurants near me in Pollachi' or 'best restaurant Pollachi'. This drives free, highly targeted organic traffic directly to your website or Google Business Profile — resulting in more calls, walk-ins, and enquiries."
+    q: "What digital marketing services do you offer?",
+    a: "We offer a full suite of digital growth services including Search Engine Optimization (SEO), Social Media Management, Facebook & Instagram Advertising, Google Ads (PPC), Content Marketing, and Branding. Our focus is on delivering high-ROI results for businesses worldwide."
   },
   {
-    q: "Why is Google Business Profile (GMB) important for local businesses in Pollachi?",
-    a: "Google Business Profile (formerly Google My Business or GMB) is the single most important tool for local business visibility. When someone in Pollachi searches for any service on Google, the first results shown are often the 'Local 3-Pack' — a map with 3 businesses. Appearing in this Local 3-Pack drives enormous call and walk-in volume. An optimized GMB profile with accurate information, photos, reviews, and regular posts significantly increases your chances of ranking in this coveted position."
+    q: "How can SEO help my global brand?",
+    a: "SEO ensures that your brand appears at the top of search results for international audiences. By targeting competitive global keywords and optimizing for diverse search engines, we drive high-intent organic traffic to your platform, leading to increased conversions and global authority."
   },
   {
-    q: "Do you serve businesses in Coimbatore as well?",
-    a: "Yes! While Synzephyr Technologies is based in Pollachi, we actively serve clients across Coimbatore, Udumalpet, Tiruppur, and the greater Tamil Nadu region. We offer the same full suite of SEO, digital marketing, GMB optimization, and graphic design services to businesses throughout Coimbatore district. We understand the local market dynamics of both Pollachi and Coimbatore, giving our clients a competitive advantage."
+    q: "Can you still help with Local SEO in Tamil Nadu?",
+    a: "Yes! While we serve global clients, we maintain deep roots in Tamil Nadu. We provide specialized Local SEO and Google Business Profile optimization for businesses in Pollachi, Coimbatore, and surrounding areas who want to dominate their regional market."
   },
   {
-    q: "How long does it take to see results from digital marketing?",
-    a: "Results timelines vary by service. Google Business Profile optimization can start showing improved visibility within 4–8 weeks. SEO typically shows meaningful ranking improvements within 3–6 months of consistent effort. Social media marketing and paid advertising (Google Ads, Facebook Ads) can generate leads and traffic almost immediately upon launch. We provide monthly reports so you can see exactly what's working and track your return on investment."
+    q: "How long does it take to see results from your marketing campaigns?",
+    a: "Results vary by service: Paid campaigns (Google/Meta Ads) often show leads within days. SEO and organic brand building typically show meaningful growth within 3–6 months. We provide detailed monthly analytics so you can track your global performance and ROI."
   },
 ]
 
@@ -68,7 +68,7 @@ const serviceAreas = [
   "Valparai", "Palladam", "Kinathukadavu", "Madukarai", "Sulur"
 ]
 
-import { LocalExpertise } from "@/components/sections/local-expertise"
+import { IndustryExpertise } from "@/components/sections/industry-expertise"
 
 export default function Home() {
   return (
@@ -80,7 +80,7 @@ export default function Home() {
 
       <Hero />
       <ServicesSection />
-      <LocalExpertise />
+      <IndustryExpertise />
       <WhyChooseUs />
       <Process />
 
@@ -90,19 +90,19 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="space-y-6">
               <h2 id="about-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl">
-                Pollachi&apos;s Trusted Digital Marketing Partner
+                Global Digital Growth Partner with Deep Technical Roots
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Synzephyr Technologies is a results-driven digital marketing agency headquartered in Pollachi, Tamil Nadu. We help small and medium businesses across Pollachi, Coimbatore, and the greater Tamil Nadu region build a powerful online presence, attract more local customers, and grow their revenue through data-backed digital strategies. Our approach is built on a foundation of transparency, technical excellence, and a deep understanding of the local Tamil Nadu market dynamics.
+                Synzephyr Technologies is a results-driven digital marketing agency serving clients worldwide. Headquartered in Pollachi, India, we bridge the gap between technical excellence and creative marketing to help businesses of all sizes scale their online presence globally. Our approach is built on a foundation of data, transparency, and high-performance strategies that work across borders.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Founded with a mission to make world-class digital marketing accessible to local businesses, we understand the unique challenges and opportunities of the Pollachi and Coimbatore markets. Our team combines deep local knowledge with proven digital marketing expertise to deliver campaigns that generate real, measurable results — not just vanity metrics like likes or follows. We focus on what truly matters to your business: leads, conversions, and a positive return on investment (ROI).
+                Founded with a mission to make world-class digital growth strategies accessible to everyone, we serve a diverse range of international industries—from e-commerce and SaaS to professional services. Our team combines international standards with a personalized touch, ensuring that every campaign we run is optimized for both global reach and high-intent conversions.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Whether you are a retailer, restaurant owner, doctor, contractor, or service provider in Pollachi, our customized digital marketing solutions are designed to connect you with customers exactly when they are searching for your services. From ranking your website on page 1 of Google through expert SEO, to managing your Google Business Profile (GMB) to dominate local map searches — Synzephyr Technologies is your end-to-end growth partner. We take the technical burden off your shoulders so you can focus on running your business.
+                Whether you are a startup in San Francisco, an e-commerce brand in London, or a local powerhouse in Coimbatore, our customized solutions are designed to connect you with your audience exactly where they are. From dominating search results with expert SEO to building unforgettable brands through strategic design, Synzephyr Technologies is your end-to-end global growth partner.
               </p>
               <p className="text-muted-foreground text-lg leading-relaxed">
-                In today&apos;s digital-first world, your website and local map listing are often the first points of contact for potential customers. If your business isn&apos;t visible on Google in Pollachi or Coimbatore, you are losing revenue to competitors who are. We bridge that gap by implementing the latest SEO techniques, high-converting web designs, and strategic social media management that speaks directly to your local target audience.
+                In a digital-first world, your geography shouldn&apos;t limit your growth. We implement the latest AI-driven SEO techniques, conversion-optimized web designs, and precision-targeted advertising that speaks to global audiences while respecting local cultural nuances.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link href="/about" className="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-6 text-sm font-medium hover:bg-accent hover:text-accent-foreground transition-colors">
@@ -136,10 +136,10 @@ export default function Home() {
               </div>
               <div className="bg-primary/5 rounded-2xl border border-primary/20 p-6">
                 <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
-                  <MapPin className="h-5 w-5 text-primary" /> Regional Coverage
+                  <MapPin className="h-5 w-5 text-primary" /> Global Reach, Local Roots
                 </h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  While we are headquartered in Pollachi, our reach extends throughout the major business hubs of Coimbatore and the surrounding Tamil Nadu region.
+                  Headquartered in India, we deliver world-class digital solutions to organizations across the globe, maintaining a strong network in our home regional hubs.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {serviceAreas.map(area => (
@@ -149,7 +149,7 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-xs text-muted-foreground mt-3">
-                  Based in Pollachi · Serving all of Tamil Nadu &amp; South India
+                  Serving Clients in USA · UK · India · Worldwide
                 </p>
               </div>
             </div>

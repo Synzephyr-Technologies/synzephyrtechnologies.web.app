@@ -18,7 +18,7 @@ export function Hero() {
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src="/logo.webp"
-                                alt="Synzephyr Technologies – Digital Marketing Agency in Pollachi"
+                                alt="Synzephyr Technologies – Global Digital Growth Agency"
                                 width={300}
                                 height={300}
                                 className="h-28 md:h-36 w-auto"
@@ -29,10 +29,10 @@ export function Hero() {
                         </picture>
                     </div>
                     <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300 pb-2">
-                        Digital Growth Solutions for Businesses in Pollachi &amp; Coimbatore
+                        Global Digital Solutions for High-Growth Brands
                     </h1>
                     <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                        Elevate your brand with data-driven SEO, cutting-edge digital marketing, and strategic campaigns tailored for the Tamil Nadu market.
+                        Elevate your business with data-driven SEO, cutting-edge digital marketing, and strategic growth campaigns delivered worldwide.
                     </p>
                 </div>
                 <div className="mx-auto mt-8 flex w-full max-w-sm flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 animate-fade-in-up delay-200">

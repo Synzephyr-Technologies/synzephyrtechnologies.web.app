@@ -11,11 +11,11 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-1 md:col-span-1">
                         <Link href="/" className="flex items-center gap-2 mb-4">
-                            <Image src="/logo.webp" alt="Synzephyr Technologies – Digital Marketing Agency Pollachi" width={100} height={100} className="h-10 w-auto max-w-[100px]" loading="lazy" />
+                            <Image src="/logo.webp" alt="Synzephyr Technologies – Global Digital Marketing Agency" width={100} height={100} className="h-10 w-auto max-w-[100px]" loading="lazy" />
                             <span className="font-bold text-lg">Synzephyr Technologies</span>
                         </Link>
                         <p className="mt-4 text-sm text-muted-foreground">
-                            Empowering businesses in Pollachi & Coimbatore with cutting-edge digital growth solutions.
+                            Scaling brands globally with data-driven digital growth solutions. Headquartered in India, serving the world.
                         </p>
                         <div className="mt-6 flex space-x-4">
                             <Link href="https://www.facebook.com/synzephyr.tech" target="_blank" className="text-muted-foreground hover:text-primary transition-colors">

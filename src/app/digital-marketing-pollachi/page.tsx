@@ -4,7 +4,7 @@ import { Megaphone, MessageCircle, MousePointerClick } from "lucide-react"
 
 export const metadata: Metadata = {
     title: "Digital Marketing Agency in Pollachi",
-    description: "Synzephyr Technologies is the leading digital marketing agency in Pollachi. We offer social media management, Facebook & Instagram ads, Google Ads, and content marketing to grow your business.",
+    description: "Synzephyr Technologies is the leading digital marketing agency in Pollachi. We offer social media management, Google Ads, and marketing to grow your business.",
     alternates: {
         canonical: "https://synzephyrtechnologies.web.app/digital-marketing-pollachi",
     },
@@ -48,6 +48,15 @@ const faqJsonLd = {
     ]
 }
 
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://synzephyrtechnologies.web.app" },
+        { "@type": "ListItem", "position": 2, "name": "Digital Marketing Pollachi", "item": "https://synzephyrtechnologies.web.app/digital-marketing-pollachi" }
+    ]
+}
+
 const benefits = [
     "Social Media Management (Facebook, Instagram, LinkedIn)",
     "Facebook & Instagram Ads with ROI-focused targeting",
@@ -65,6 +74,7 @@ export default function DigitalMarketingPollachiPage() {
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
             <ServiceLayout
                 title="Premier Digital Marketing Agency in Pollachi"
                 subtitle="Build a Powerful Online Presence and Scale Your Brand in the Pollachi Market."

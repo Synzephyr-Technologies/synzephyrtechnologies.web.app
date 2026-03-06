@@ -4,7 +4,7 @@ import { Search, Globe, MapPin, Palette, ArrowRight, CheckCircle } from "lucide-
 
 export const metadata: Metadata = {
     title: "Digital Marketing Agency in Coimbatore",
-    description: "Synzephyr Technologies – trusted digital marketing agency serving Coimbatore businesses. Expert SEO, Google Business Profile optimization, social media marketing & more. Get a free consultation.",
+    description: "Synzephyr Technologies: trusted digital marketing agency for Coimbatore. Expert SEO, GMB optimization, and social media marketing. Get a free consultation!",
     alternates: {
         canonical: "https://synzephyrtechnologies.web.app/digital-marketing-coimbatore",
     },
