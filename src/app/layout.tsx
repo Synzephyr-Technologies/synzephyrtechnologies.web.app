@@ -203,45 +203,50 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              "@id": "https://synzephyrtechnologies.web.app/#organization",
-              "name": "Synzephyr Technologies",
-              "legalName": "Synzephyr Technologies",
-              "image": "https://synzephyrtechnologies.web.app/logo.webp",
-              "logo": "https://synzephyrtechnologies.web.app/logo.webp",
-              "description": "Synzephyr Technologies is a global digital marketing and growth agency specializing in high-performance SEO, social media marketing, and data-driven branding for businesses worldwide.",
-              "url": "https://synzephyrtechnologies.web.app",
-              "telephone": "+919443449557",
-              "email": "contact.synzephyr@gmail.com",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Pollachi",
-                "addressLocality": "Pollachi",
-                "addressRegion": "Tamil Nadu",
-                "postalCode": "642001",
-                "addressCountry": "IN"
-              },
-              "areaServed": {
-                "@type": "Country",
-                "name": "Worldwide"
-              },
-              "sameAs": [
-                "https://share.google.com/qzAusQ6g4QiP59MeV",
-                "https://www.instagram.com/synzephyr.tech",
-                "https://www.facebook.com/synzephyr.tech",
-                "https://www.linkedin.com/company/synzephyr/",
-                "https://x.com/synzephyr_tech",
-                "https://www.reddit.com/user/SynzephyrTech"
-              ],
-              "hasOfferCatalog": {
-                "@type": "OfferCatalog",
-                "name": "Global Growth Services",
-                "itemListElement": [
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Global SEO Services", "url": "https://synzephyrtechnologies.web.app/services" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing Worldwide", "url": "https://synzephyrtechnologies.web.app/services" } },
-                  { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding & Graphic Design", "url": "https://synzephyrtechnologies.web.app/graphic-design-services-pollachi" } }
-                ]
-              }
+              "@graph": [
+                {
+                  "@type": ["Organization", "ProfessionalService"],
+                  "@id": "https://synzephyrtechnologies.web.app/#organization",
+                  "name": "Synzephyr Technologies",
+                  "legalName": "Synzephyr Technologies",
+                  "image": "https://synzephyrtechnologies.web.app/logo.webp",
+                  "logo": "https://synzephyrtechnologies.web.app/logo.webp",
+                  "description": "Synzephyr Technologies is a global digital marketing and growth agency specializing in high-performance SEO, social media marketing, and data-driven branding for businesses worldwide.",
+                  "url": "https://synzephyrtechnologies.web.app",
+                  "telephone": "+919443449557",
+                  "email": "contact.synzephyr@gmail.com",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Pollachi",
+                    "addressLocality": "Pollachi",
+                    "addressRegion": "Tamil Nadu",
+                    "postalCode": "642001",
+                    "addressCountry": "IN"
+                  },
+                  "areaServed": {
+                    "@type": "Country",
+                    "name": "Worldwide"
+                  },
+                  "priceRange": "$$",
+                  "sameAs": [
+                    "https://share.google.com/qzAusQ6g4QiP59MeV",
+                    "https://www.instagram.com/synzephyr.tech",
+                    "https://www.facebook.com/synzephyr.tech",
+                    "https://www.linkedin.com/company/synzephyr/",
+                    "https://x.com/synzephyr_tech",
+                    "https://www.reddit.com/user/SynzephyrTech"
+                  ],
+                  "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Global Growth Services",
+                    "itemListElement": [
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Global SEO Services", "url": "https://synzephyrtechnologies.web.app/services" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Digital Marketing Worldwide", "url": "https://synzephyrtechnologies.web.app/services" } },
+                      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Branding & Graphic Design", "url": "https://synzephyrtechnologies.web.app/graphic-design-services-pollachi" } }
+                    ]
+                  }
+                }
+              ]
             }),
           }}
         />
