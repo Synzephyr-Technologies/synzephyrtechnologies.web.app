@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { ModeToggle } from "./mode-toggle"
 import { cn } from "@/lib/utils"
+import { motion, AnimatePresence } from "framer-motion"
 
 const navItems = [
     { name: "Home", href: "/", ariaLabel: "Synzephyr Technologies Homepage" },
@@ -15,7 +16,6 @@ const navItems = [
     { name: "Portfolio", href: "/portfolio", ariaLabel: "Our Client Portfolio" },
     { name: "Blog", href: "/blog", ariaLabel: "Digital Marketing Blog" },
     { name: "Contact", href: "/contact", ariaLabel: "Contact Synzephyr Technologies" },
-    { name: "Connect", href: "/connect", ariaLabel: "Connect With Us on Social Media" },
 ]
 
 export function Navbar() {
@@ -27,52 +27,62 @@ export function Navbar() {
     }, [pathname])
 
     return (
-        <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
+        <nav className="sticky top-0 z-50 w-full border-b border-border/40 glass">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex h-16 items-center justify-between">
-                    <Link href="/" className="flex items-center space-x-2">
-                        <Image src="/logo.webp" alt="Synzephyr Technologies" width={80} height={80} className="h-8 w-auto max-w-[80px]" />
-                        <span className="font-bold text-sm sm:text-lg">Synzephyr Technologies</span>
+                <div className="flex h-18 items-center justify-between">
+                    <Link href="/" className="flex items-center space-x-3 group">
+                        <div className="relative h-9 w-9 overflow-hidden rounded-xl bg-primary/10 flex items-center justify-center p-1.5 group-hover:scale-110 transition-transform duration-300">
+                            <Image src="/logo.webp" alt="Synzephyr Technologies" width={40} height={40} className="h-full w-auto" />
+                        </div>
+                        <span className="font-bold text-lg tracking-tight">Synzephyr <span className="text-primary">Tech</span></span>
                     </Link>
 
                     {/* Desktop Menu */}
                     <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-4">
+                        <div className="flex items-center space-x-1">
                             {navItems.map((item) => (
                                 <Link
                                     key={item.name}
                                     href={item.href}
                                     aria-label={item.ariaLabel}
                                     className={cn(
-                                        "relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary",
+                                        "relative px-4 py-2 text-sm font-semibold transition-all duration-300 rounded-lg group",
                                         pathname === item.href
-                                            ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
-                                            : "text-muted-foreground"
+                                            ? "text-primary bg-primary/5"
+                                            : "text-muted-foreground hover:text-primary hover:bg-muted/50"
                                     )}
                                 >
                                     {item.name}
+                                    {pathname === item.href && (
+                                        <motion.div 
+                                            layoutId="nav-active"
+                                            className="absolute bottom-1 left-4 right-4 h-0.5 bg-primary rounded-full"
+                                        />
+                                    )}
                                 </Link>
                             ))}
                         </div>
                     </div>
 
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2">
                         <ModeToggle />
 
                         {/* Mobile Menu Button */}
-                        <div className="-mr-2 flex md:hidden">
+                        <div className="flex md:hidden">
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 type="button"
-                                className="inline-flex items-center justify-center p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-muted focus:outline-none"
+                                className="inline-flex items-center justify-center h-11 w-11 rounded-full text-muted-foreground hover:text-primary hover:bg-muted transition-all"
                                 aria-controls="mobile-menu"
+                                aria-haspopup="true"
                                 {...(isOpen ? { "aria-expanded": "true" } : { "aria-expanded": "false" })}
                                 aria-label={isOpen ? "Close menu" : "Open menu"}
                             >
+
                                 {isOpen ? (
-                                    <X className="block h-6 w-6" aria-hidden="true" />
+                                    <X className="h-6 w-6" />
                                 ) : (
-                                    <Menu className="block h-6 w-6" aria-hidden="true" />
+                                    <Menu className="h-6 w-6" />
                                 )}
                             </button>
                         </div>
@@ -80,32 +90,40 @@ export function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Menu — pure CSS transition, no Framer Motion */}
-            <div
-                id="mobile-menu"
-                className={cn(
-                    "md:hidden border-b border-border overflow-hidden transition-all duration-300 ease-in-out",
-                    isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                )}
-            >
-                <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                    {navItems.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            aria-label={item.ariaLabel}
-                            className={cn(
-                                "block px-3 py-2 rounded-md text-base font-medium transition-colors",
-                                pathname === item.href
-                                    ? "bg-muted text-primary"
-                                    : "text-muted-foreground hover:bg-muted hover:text-primary"
-                            )}
+            {/* Mobile Menu */}
+            <div id="mobile-menu" className="md:hidden overflow-hidden">
+                <AnimatePresence>
+                    {isOpen && (
+                        <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            className="border-t border-border/40 bg-background/95 backdrop-blur-xl"
                         >
-                            {item.name}
-                        </Link>
-                    ))}
-                </div>
+                            <div className="space-y-1 px-4 pb-6 pt-4">
+                                {navItems.map((item) => (
+                                    <Link
+                                        key={item.name}
+                                        href={item.href}
+                                        aria-label={item.ariaLabel}
+                                        className={cn(
+                                            "block px-4 py-3 rounded-xl text-base font-bold transition-all",
+                                            pathname === item.href
+                                                ? "bg-primary/10 text-primary"
+                                                : "text-muted-foreground hover:bg-muted hover:text-primary"
+                                        )}
+                                    >
+                                        {item.name}
+                                    </Link>
+                                ))}
+                            </div>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
         </nav>
     )
 }
+
+

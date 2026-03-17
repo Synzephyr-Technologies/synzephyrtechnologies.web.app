@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-@theme {
+:root {
+  /* Theme Mapping */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
@@ -18,28 +19,20 @@
   --color-ring: var(--ring);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
 
-:root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a;
 
-  /* Navy Accents for Light Mode */
-  --primary: #0f172a;
-  /* Slate 900 */
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
 
-  --secondary: #e2e8f0;
-  /* Slate 200 */
-  --secondary-foreground: #0f172a;
+  --secondary: #64748b;
+  --secondary-foreground: #ffffff;
 
-  --muted: #f1f5f9;
-  /* Slate 100 */
+  --muted: #f8fafc;
   --muted-foreground: #64748b;
-  /* Slate 500 */
 
-  --accent: #f8fafc;
-  /* Slate 50 */
+  --accent: #f1f5f9;
   --accent-foreground: #0f172a;
 
   --destructive: #ef4444;
@@ -47,70 +40,103 @@
 
   --border: #e2e8f0;
   --input: #e2e8f0;
-  --ring: #0f172a;
-  --radius: 0.5rem;
+  --ring: #2563eb;
+  --radius: 0.75rem;
+  --glass-border-fallback: rgba(15, 23, 42, 0.1);
 }
 
 .dark {
-  --background: #0a0a0a;
-  /* Deep Charcoal */
-  --foreground: #ededed;
+  --background: #020617;
+  --foreground: #f8fafc;
 
-  /* Electric Blue Accents for Dark Mode */
   --primary: #3b82f6;
-  /* Blue 500 */
   --primary-foreground: #ffffff;
 
   --secondary: #1e293b;
-  /* Slate 800 */
-  --secondary-foreground: #ededed;
+  --secondary-foreground: #f8fafc;
 
-  --muted: #1e293b;
+  --muted: #0f172a;
   --muted-foreground: #94a3b8;
-  /* Slate 400 */
 
   --accent: #1e293b;
-  --accent-foreground: #ededed;
+  --accent-foreground: #f8fafc;
 
   --destructive: #7f1d1d;
-  --destructive-foreground: #ededed;
+  --destructive-foreground: #f8fafc;
 
   --border: #1e293b;
   --input: #1e293b;
   --ring: #3b82f6;
+  --glass-border-fallback: rgba(248, 250, 252, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
+/* Premium Utilities */
+.glass {
+  background: color-mix(in srgb, var(--background), transparent 30%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid var(--glass-border-fallback);
+
+  @supports (border: 1px solid color-mix(in srgb, red, blue)) {
+    border: 1px solid color-mix(in srgb, var(--foreground), transparent 90%);
+  }
+
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
 }
 
-::-webkit-scrollbar-track {
-  background: var(--background);
+.text-gradient {
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(135deg, #3b82f6, #06b6d4, #10b981);
 }
 
-::-webkit-scrollbar-thumb {
-  background: var(--muted-foreground);
-  border-radius: 5px;
+
+.mesh-bg {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(6, 182, 212, 0.15) 0, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(6, 182, 212, 0.15) 0, transparent 50%);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary);
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-/* Glow effects */
-.glow-text {
-  text-shadow: 0 0 10px var(--primary);
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
 
-/* Fade-in-up animation — replaces Framer Motion for section cards */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -124,70 +150,36 @@ body {
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 0.5s ease-out;
+  animation: fade-in-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Named stagger delays — eliminates all inline style={{ animationDelay }} */
-.delay-100 {
-  animation-delay: 100ms;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.delay-200 {
-  animation-delay: 200ms;
+::-webkit-scrollbar-track {
+  background: var(--background);
 }
 
-.delay-300 {
-  animation-delay: 300ms;
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
 }
 
-.delay-400 {
-  animation-delay: 400ms;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
 }
 
-/* Respect reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
-  .animate-fade-in-up {
-    animation: none;
-  }
-}
-
-/* ─── Mobile-Friendliness ─────────────────────────────────────────────────── */
-
-/* Remove 300ms tap delay on all interactive elements */
+/* Mobile Adjustments */
 a,
-button,
-input,
-select,
-textarea,
-label,
-[role="button"] {
+button {
   touch-action: manipulation;
 }
 
-/* Ensure minimum tap target size (48×48px) for better mobile accessibility */
-button,
-[role="button"],
-a {
-  min-height: 44px;
-  min-width: 44px;
-}
-
-/* Prevent iOS Safari from auto-zooming on input focus (font-size must be ≥16px) */
-input,
-select,
-textarea {
-  font-size: 16px;
-}
-
-/* Prevent horizontal overflow / content wider than viewport on mobile */
-html,
-body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
-
-/* Ensure images never overflow their containers on small screens */
-img,
-video {
-  max-width: 100%;
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }

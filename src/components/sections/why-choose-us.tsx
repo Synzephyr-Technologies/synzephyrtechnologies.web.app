@@ -1,90 +1,128 @@
 "use client"
 
-import { CheckCircle2 } from "lucide-react"
+import { CheckCircle2, TrendingUp, Users, ShieldCheck } from "lucide-react"
+import { motion } from "framer-motion"
 
 const reasons = [
     {
         title: "Local Market Expertise",
-        desc: "Deep knowledge of Pollachi, Coimbatore, and Tamil Nadu consumer behaviour that national agencies simply don't have.",
+        desc: "Deep knowledge of regional consumer behaviour that national agencies simply don't have.",
     },
     {
         title: "Data-Driven Strategies",
-        desc: "Every campaign decision is backed by keyword data, competitor analysis, and live performance metrics.",
+        desc: "Every campaign decision is backed by keyword data and live performance metrics.",
     },
     {
         title: "Transparent Reporting",
-        desc: "Monthly reports with clear metrics — rankings, traffic, leads, and ROI — so you always know what's working.",
+        desc: "Monthly reports with clear metrics — rankings, traffic, leads, and ROI.",
     },
     {
         title: "Customized Solutions",
-        desc: "No cookie-cutter packages. Every strategy is built specifically for your business, industry, and local audience.",
+        desc: "No cookie-cutter packages. Every strategy is built specifically for your audience.",
     },
     {
         title: "Dedicated Support Team",
-        desc: "A real team you can call or WhatsApp. We are always available to answer questions and provide updates.",
+        desc: "A real team available to answer questions and provide real-time updates.",
     },
     {
         title: "Proven Track Record",
-        desc: "We have helped businesses in Pollachi & Coimbatore rank on page 1 of Google and grow their customer base.",
+        desc: "Helping businesses rank on page 1 of Google and grow their customer base.",
     },
 ]
 
 export function WhyChooseUs() {
     return (
-        <section className="py-20 bg-background" aria-labelledby="why-heading">
-            <div className="container px-4 md:px-6 mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <section className="py-32 bg-muted/20 relative overflow-hidden" aria-labelledby="why-heading">
+            <div className="container px-4 md:px-6 mx-auto relative z-10">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div>
-                        <h2 id="why-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-6">
-                            Why Choose Synzephyr Technologies?
-                        </h2>
-                        <p className="text-muted-foreground text-lg mb-4 leading-relaxed">
-                            We don&apos;t just deliver digital marketing services — we deliver measurable business growth. As a Pollachi-based digital marketing agency, our deep understanding of the local market in Pollachi and Coimbatore allows us to create strategies that truly resonate with your target audience and outperform generic, one-size-fits-all approaches.
-                        </p>
-                        <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-                            When you work with Synzephyr, you get a partner who is as invested in your success as you are. We combine technical SEO expertise, creative content, and paid campaign management with genuine local knowledge to build digital marketing campaigns that convert.
-                        </p>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <motion.span 
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold tracking-wide uppercase mb-4 inline-block"
+                        >
+                            The Synzephyr Advantage
+                        </motion.span>
+                        <motion.h2 
+                            id="why-heading" 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-8 leading-[1.1]"
+                        >
+                            Why Choose <span className="text-gradient">Synzephyr Technologies?</span>
+                        </motion.h2>
+                        
+                        <motion.p 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2 }}
+                            className="text-muted-foreground text-lg mb-10 leading-relaxed"
+                        >
+                            We deliver measurable business growth. As a specialized digital marketing agency, we create strategies that truly resonate with your target audience and outperform generic approaches.
+                        </motion.p>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             {reasons.map((reason, index) => (
-                                <div
+                                <motion.div
                                     key={index}
-                                    className={`flex items-start space-x-3 animate-fade-in-up delay-${(index + 1) * 100}`}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.3 + (index * 0.1) }}
+                                    className="flex items-start space-x-4 group"
                                 >
-                                    <CheckCircle2 className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
-                                    <div>
-                                        <span className="font-semibold block">{reason.title}</span>
-                                        <span className="text-sm text-muted-foreground">{reason.desc}</span>
+                                    <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                        <CheckCircle2 className="h-4 w-4" />
                                     </div>
-                                </div>
+                                    <div>
+                                        <span className="font-bold text-lg block">{reason.title}</span>
+                                        <span className="text-muted-foreground leading-relaxed">{reason.desc}</span>
+                                    </div>
+                                </motion.div>
                             ))}
                         </div>
                     </div>
-                    <div className="relative">
-                        <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-cyan-500 rounded-2xl opacity-20 blur-2xl dark:opacity-10" aria-hidden="true" />
-                        <div className="relative bg-muted/50 p-8 rounded-2xl border border-border space-y-6">
-                            <h3 className="text-2xl font-bold">Our Commitment to Pollachi &amp; Coimbatore Businesses</h3>
-                            <p className="text-muted-foreground leading-relaxed">
-                                At Synzephyr Technologies, we believe that every business in Pollachi, Coimbatore, and across Tamil Nadu deserves access to high-quality, affordable digital marketing that drives genuine growth. We are committed to building long-term partnerships — not just completing one-off projects.
+
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.4 }}
+                        className="relative"
+                    >
+                        <div className="absolute inset-0 bg-primary/10 blur-3xl -rotate-6 scale-95 pointer-events-none" />
+                        <div className="relative glass p-8 md:p-12 rounded-[2.5rem] border border-border/50 shadow-2xl space-y-8">
+                            <h3 className="text-3xl font-bold tracking-tight">Our Commitment to Growth</h3>
+                            <p className="text-muted-foreground leading-relaxed text-lg">
+                                We believe that every business deserves access to high-quality digital marketing that drives genuine growth. We focus on results that matter — more leads, more authority, and more revenue.
                             </p>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Your growth is our success. That&apos;s why we focus on results that matter — more phone calls, more website visits, more walk-in customers, and ultimately more revenue for your business.
-                            </p>
-                            <div className="grid grid-cols-3 gap-4 pt-2 border-t border-border">
+                            
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-6 border-t border-border/50">
                                 {[
-                                    { stat: "50+", label: "Clients Served" },
-                                    { stat: "3+", label: "Years Experience" },
-                                    { stat: "100%", label: "Transparent Reports" },
+                                    { stat: "50+", label: "Clients Served", icon: Users },
+                                    { stat: "100%", label: "ROI Driven", icon: TrendingUp },
+                                    { stat: "24/7", label: "Global Sync", icon: ShieldCheck },
                                 ].map((item, i) => (
-                                    <div key={i} className="text-center">
-                                        <p className="text-2xl font-extrabold text-primary">{item.stat}</p>
-                                        <p className="text-xs text-muted-foreground mt-1">{item.label}</p>
+                                    <div key={i} className="text-center sm:text-left space-y-2">
+                                        <div className="flex items-center justify-center sm:justify-start gap-2 mb-1">
+                                            <item.icon className="h-5 w-5 text-primary" />
+                                            <p className="text-3xl font-black tracking-tight">{item.stat}</p>
+                                        </div>
+                                        <p className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{item.label}</p>
                                     </div>
                                 ))}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
+            {/* Background elements */}
+            <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 blur-[100px] pointer-events-none" />
         </section>
     )
 }
+
