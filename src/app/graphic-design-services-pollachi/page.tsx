@@ -47,6 +47,7 @@ export default function GraphicDesignPollachiPage() {
                 subtitle="Visual Storytelling that Captures Your Brand Essence & Drives Action."
                 description="First impressions matter. For businesses in Pollachi and Coimbatore, a strong visual identity is the difference between being remembered and being ignored. Our creative graphic design team at Synzephyr Technologies helps you craft a compelling visual identity that resonates deepl  with your target customers. From memorable logos and stunning social media creatives to marketing brochures, packaging, and website UI — every design we create aligns with your brand's message, goals, and audience. We work with businesses across all industries in Pollachi, Coimbatore, and Tamil Nadu."
                 benefits={benefits}
+                currentPath="/graphic-design-services-pollachi"
             >
                 <div className="grid grid-cols-1 gap-6">
                     <div className="flex items-center space-x-4 p-4 bg-background rounded-xl border border-border">

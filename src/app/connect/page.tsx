@@ -100,6 +100,7 @@ export default function ConnectPage() {
                             key={index}
                             href={link.url}
                             target={link.url.startsWith("http") ? "_blank" : "_self"}
+                            rel={link.url.startsWith("http") ? "noopener noreferrer" : undefined}
                             className={`flex items-center p-4 rounded-xl shadow-sm hover:shadow-md hover:scale-[1.02] transition-all bg-background border border-border group`}
                         >
                             <div className={`p-2 rounded-full ${link.color} ${link.textColor} mr-4 group-hover:opacity-90 transition-opacity`}>

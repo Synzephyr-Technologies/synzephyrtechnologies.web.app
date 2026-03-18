@@ -74,6 +74,7 @@ export default function SeoCoimbatorePage() {
                 subtitle="Dominate the Competitive Coimbatore Market with Expert SEO."
                 description="Coimbatore is a bustling hub of industry, commerce, and textiles. Standing out in this market requires more than just a website — it requires a strategic, data-backed digital presence. Synzephyr Technologies provides cutting-edge SEO services tailored for the Coimbatore market, helping businesses across sectors like manufacturing, retail, healthcare, education, and hospitality outrank competitors and capture significant market share. Our team understands the local search landscape and builds campaigns that deliver consistent, measurable growth."
                 benefits={benefits}
+                currentPath="/seo-services-coimbatore"
             >
                 <div className="grid grid-cols-1 gap-6">
                     <div className="flex items-center space-x-4 p-4 bg-background rounded-xl border border-border">

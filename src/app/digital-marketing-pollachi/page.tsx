@@ -80,6 +80,7 @@ export default function DigitalMarketingPollachiPage() {
                 subtitle="Build a Powerful Online Presence and Scale Your Brand in the Pollachi Market."
                 description="In a rapidly evolving digital landscape, having a social media page isn't enough. You need a comprehensive strategy that connects your brand with the right people at the right time. At Synzephyr Technologies — Pollachi's top digital marketing firm — we specialize in creating data-backed campaigns that drive engagement, visibility, and sales. From expert social media management to precision-targeted advertising on Facebook, Instagram, and Google, we help Pollachi businesses of all sizes stand out and thrive online."
                 benefits={benefits}
+                currentPath="/digital-marketing-pollachi"
             >
                 <div className="space-y-12">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -3,13 +3,13 @@ import { ServiceLayout } from "@/components/service-layout"
 import { MapPin, Star, PhoneCall } from "lucide-react"
 
 export const metadata: Metadata = {
-    title: "GMB Optimization Pollachi | Google Business Profile",
+    title: "GMB Optimization & Setup Pollachi",
     description: "Expert Google Business Profile (GMB) setup in Pollachi. Appear in Google Maps local pack and get more calls from nearby customers. Trusted by local businesses.",
     alternates: {
         canonical: "https://synzephyrtechnologies.web.app/google-business-profile-setup-pollachi",
     },
     openGraph: {
-        title: "GMB Optimization Pollachi | Google Business Profile Setup | Synzephyr",
+        title: "GMB Optimization & Setup Pollachi | Synzephyr",
         description: "Professional Google Business Profile setup and GMB optimization in Pollachi. Get into the local 3-pack and drive more customers to your business.",
         url: "https://synzephyrtechnologies.web.app/google-business-profile-setup-pollachi",
     },
@@ -73,6 +73,7 @@ export default function GmbSetupPollachiPage() {
                 subtitle="Be the First Choice for Local Customers — Dominate Google Maps in Pollachi."
                 description="When customers in Pollachi search for services like yours, do they find you on Google Maps? A fully optimized Google Business Profile (GBP) — formerly called Google My Business (GMB) — is the single most powerful tool for local visibility. Synzephyr Technologies helps Pollachi businesses set up, verify, and optimize their GBP to ensure they appear prominently in the coveted 'Local 3-pack', driving maximum foot traffic, phone calls, and website visits. We also handle ongoing management so your profile stays fresh, relevant, and competitive."
                 benefits={benefits}
+                currentPath="/google-business-profile-setup-pollachi"
             >
                 <div className="grid grid-cols-1 gap-6">
                     <div className="flex items-center space-x-4 p-4 bg-background rounded-xl border border-border">

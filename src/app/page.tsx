@@ -9,6 +9,7 @@ const AboutSummary = dynamic(() => import("@/components/sections/about-summary")
 const LocationFocus = dynamic(() => import("@/components/sections/location-focus").then(mod => mod.LocationFocus))
 const FAQ = dynamic(() => import("@/components/sections/faq").then(mod => mod.FAQ))
 const CTA = dynamic(() => import("@/components/sections/cta").then(mod => mod.CTA))
+const RecognitionSection = dynamic(() => import("@/components/sections/recognition").then(mod => mod.RecognitionSection))
 
 export const metadata: Metadata = {
   title: "Synzephyr Technologies | Global Digital Growth & Marketing Agency",
@@ -54,6 +55,7 @@ export default function Home() {
       <Hero />
       <ServicesSection />
       <IndustryExpertise />
+      <RecognitionSection />
       <WhyChooseUs />
       <Process />
       <AboutSummary />

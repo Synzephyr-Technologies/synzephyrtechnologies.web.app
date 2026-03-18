@@ -1,0 +1,18 @@
+{
+  "files.exclude": {
+    "**/out": true,
+    "**/out/**": true
+  },
+  "search.exclude": {
+    "**/out": true,
+    "**/out/**": true
+  },
+  "files.watcherExclude": {
+    "**/out/**": true
+  },
+  "tailwindCSS.files.exclude": [
+    "**/.next/**",
+    "**/out/**",
+    "**/node_modules/**"
+  ]
+}

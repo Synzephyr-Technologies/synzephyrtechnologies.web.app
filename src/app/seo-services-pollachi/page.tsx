@@ -79,6 +79,7 @@ export default function SeoPollachiPage() {
                 subtitle="Dominate Google Search and Attract High-Value Local Leads in Pollachi."
                 description="In today's digital era, if your business is not visible on the first page of Google, you are essentially invisible to a huge segment of your target audience. At Synzephyr Technologies — the leading SEO agency in Pollachi — we specialize in bridging the gap between your business and potential customers. Our sophisticated, data-driven SEO strategies are tailored specifically for the Pollachi and Coimbatore markets, ensuring that you rank for the terms your customers are actually searching for. Whether you are a retailer, a healthcare professional, or a local service provider, we have the technical expertise to put you on page 1."
                 benefits={benefits}
+                currentPath="/seo-services-pollachi"
             >
                 <div className="space-y-10 group">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
