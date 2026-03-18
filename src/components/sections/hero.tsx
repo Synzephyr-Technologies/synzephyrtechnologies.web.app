@@ -34,7 +34,7 @@ export function Hero() {
                             />
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
-                                src="/logo.webp"
+                                src="/logo-300.webp"
                                 alt="Synzephyr Technologies – Global Digital Growth Agency"
                                 width={300}
                                 height={300}

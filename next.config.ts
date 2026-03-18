@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   },
   experimental: {
     optimizeCss: true, // Requires 'critters' library
+    optimizePackageImports: ["lucide-react", "framer-motion"],
   },
 };
 

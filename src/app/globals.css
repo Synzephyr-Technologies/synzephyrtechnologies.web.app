@@ -181,6 +181,11 @@ body {
   animation: pulse-slow 12s ease-in-out infinite reverse;
 }
 
+/* Fix for critters parsing error with group-open */
+details[open] .faq-rotate {
+  transform: rotate(45deg);
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

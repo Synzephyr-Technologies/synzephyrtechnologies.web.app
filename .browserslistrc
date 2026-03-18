@@ -1,7 +1,7 @@
-# Target modern browsers that support ES2022+ features natively
-# This helps remove legacy polyfills mentioned in Lighthouse audits (at, hasOwn, flat, etc.)
-
-last 2 versions
+# Target only modern browsers to eliminate polyfills for ES2022+ features (at, flat, hasOwn, etc.)
+# This directly addresses the "Legacy JavaScript" Lighthouse warning for 1st party chunks.
+last 2 years
 not dead
-not IE 11
-> 1%
+> 0.5%
+not ie 11
+not op_mini all

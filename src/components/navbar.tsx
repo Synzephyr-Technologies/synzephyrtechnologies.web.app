@@ -32,7 +32,7 @@ export function Navbar() {
                 <div className="flex h-18 items-center justify-between">
                     <Link href="/" className="flex items-center space-x-3 group">
                         <div className="relative h-9 w-9 overflow-hidden rounded-xl bg-primary/10 flex items-center justify-center p-1.5 group-hover:scale-110 transition-transform duration-300">
-                            <Image src="/logo.webp" alt="Synzephyr Technologies" width={40} height={40} className="h-full w-auto" />
+                            <Image src="/logo-160.webp" alt="Synzephyr Technologies" width={40} height={40} className="h-full w-auto" />
                         </div>
                         <span className="font-bold text-lg tracking-tight">Synzephyr <span className="text-primary">Tech</span></span>
                     </Link>

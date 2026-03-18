@@ -61,7 +61,7 @@ export function FAQ() {
             <details key={i} className="group glass rounded-[2rem] border border-border/50 overflow-hidden transition-all duration-300">
               <summary className="flex items-center justify-between p-8 cursor-pointer font-bold text-xl list-none transition-colors group-open:bg-primary/5">
                 {faq.q}
-                <span className="ml-4 shrink-0 h-10 w-10 rounded-full border border-primary/20 flex items-center justify-center text-primary text-2xl group-open:rotate-45 transition-transform duration-500 bg-primary/5">
+                <span className="ml-4 shrink-0 h-10 w-10 rounded-full border border-primary/20 flex items-center justify-center text-primary text-2xl faq-rotate transition-transform duration-500 bg-primary/5">
                   +
                 </span>
               </summary>

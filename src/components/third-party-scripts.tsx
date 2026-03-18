@@ -39,10 +39,9 @@ export function ThirdPartyScripts() {
         <>
             <GoogleTagManager gtmId="GTM-MGN73MG5" />
             
-            {/* Facebook Pixel */}
             <Script
                 id="fb-pixel"
-                strategy="afterInteractive"
+                strategy="lazyOnload"
                 dangerouslySetInnerHTML={{
                     __html: `
                         !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -51,7 +50,7 @@ export function ThirdPartyScripts() {
                         t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
                         document,'script','https://connect.facebook.net/en_US/fbevents.js');
                         fbq('init','1808210129731692');
-                        fbq('track','PageView');
+                        fbq('track', 'PageView');
                     `,
                 }}
             />

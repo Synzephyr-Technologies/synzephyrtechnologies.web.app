@@ -11,7 +11,7 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-1 md:col-span-1">
                         <Link href="/" className="flex items-center gap-2 mb-4">
-                            <Image src="/logo.webp" alt="Synzephyr Technologies – Global Digital Marketing Agency" width={100} height={100} className="h-10 w-auto max-w-[100px]" loading="lazy" />
+                            <Image src="/logo-160.webp" alt="Synzephyr Technologies – Global Digital Marketing Agency" width={100} height={100} className="h-10 w-auto max-w-[100px]" loading="lazy" />
                             <span className="font-bold text-lg">Synzephyr Technologies</span>
                         </Link>
                         <p className="mt-4 text-sm text-muted-foreground">

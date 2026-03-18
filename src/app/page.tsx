@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
 import dynamic from "next/dynamic"
 import { Hero } from "@/components/sections/hero"
-import { ServicesSection } from "@/components/sections/services-section"
-
+const ServicesSection = dynamic(() => import("@/components/sections/services-section").then(mod => mod.ServicesSection))
 const IndustryExpertise = dynamic(() => import("@/components/sections/industry-expertise").then(mod => mod.IndustryExpertise))
 const WhyChooseUs = dynamic(() => import("@/components/sections/why-choose-us").then(mod => mod.WhyChooseUs))
 const Process = dynamic(() => import("@/components/sections/process").then(mod => mod.Process))
